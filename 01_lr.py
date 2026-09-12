@@ -52,8 +52,7 @@ def make_data(rng):
 def add_intercept(X):
     """Prepend a column of ones so the intercept is just another coefficient."""
     return np.hstack([np.ones((X.shape[0], 1)), X])
-
-
+    
 # ---------------------------------------------------------------------------
 # 2. The pieces of the model
 # ---------------------------------------------------------------------------
@@ -100,11 +99,9 @@ def gradient(X_design, y, beta):
     # └──────────────────────────────────────────────────────────────────────────
     # YOUR CODE HERE — the MSE gradient
     # Delete the raise below once you have written it.
-    raise NotImplementedError(
-        "Homework: write the MSE gradient. "
-        "See the YOUR TASK box just above for the steps."
-    )
-
+    n = X_design.shape[0]
+    residual = y - X_design @ beta
+    return -(2 / n) * (X_design.T @ residual)
 
 def normal_equation(X_design, y):
     """
@@ -114,8 +111,6 @@ def normal_equation(X_design, y):
     instead of inv so a singular X'X does not blow up.
     """
     return np.linalg.pinv(X_design.T @ X_design) @ X_design.T @ y
-
-
 # ---------------------------------------------------------------------------
 # 3. Fitting
 # ---------------------------------------------------------------------------
@@ -143,14 +138,16 @@ def fit_gradient_descent(X_design, y, lr=LEARNING_RATE, n_iter=N_ITERATIONS):
     # └──────────────────────────────────────────────────────────────────────────
     # YOUR CODE HERE — the gradient descent loop
     # Delete the raise below once you have written it.
-    raise NotImplementedError(
-        "Homework: write the gradient descent loop. "
-        "See the YOUR TASK box just above for the steps."
-    )
+    for _ in range(n_iter):
+      y_pred = predict(X_design, beta)
+      loss = mse(y, y_pred)
+      history.append(loss)
 
+      grad = gradient(X_design, y, beta)
+      beta = beta - lr * grad
+        
     return beta, history
-
-
+    
 # ---------------------------------------------------------------------------
 # 4. Reporting
 # ---------------------------------------------------------------------------
