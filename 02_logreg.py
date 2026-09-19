@@ -33,7 +33,6 @@ SPREAD = 1.1
 LEARNING_RATE = 0.15
 N_ITERATIONS = 3000
 
-
 # ---------------------------------------------------------------------------
 # 1. Toy data
 # ---------------------------------------------------------------------------
@@ -56,7 +55,6 @@ def make_data(rng):
 
 def add_intercept(X):
     return np.hstack([np.ones((X.shape[0], 1)), X])
-
 
 # ---------------------------------------------------------------------------
 # 2. The pieces of the model
@@ -92,10 +90,12 @@ def sigmoid(z):
     # └──────────────────────────────────────────────────────────────────────────
     # YOUR CODE HERE — the sigmoid function
     # Delete the raise below once you have written it.
-    raise NotImplementedError(
-        "Homework: write the sigmoid function. "
-        "See the YOUR TASK box just above for the steps."
-    )
+    result = np.empty_like(z, dtype=float)
+    positive = z >= 0
+    result[positive] = 1 / (1 + np.exp(-z[positive]))
+    exp_z = np.exp(z[~positive])
+    result[~positive] = exp_z / (1 + exp_z)
+    return result
 
 
 def predict_proba(X_design, beta):
@@ -130,7 +130,6 @@ def gradient(X_design, y, beta):
     n = X_design.shape[0]
     return X_design.T @ (predict_proba(X_design, beta) - y) / n
 
-
 # ---------------------------------------------------------------------------
 # 3. Fitting
 # ---------------------------------------------------------------------------
@@ -158,14 +157,14 @@ def fit_gradient_descent(X_design, y, lr=LEARNING_RATE, n_iter=N_ITERATIONS):
     # └──────────────────────────────────────────────────────────────────────────
     # YOUR CODE HERE — the gradient descent loop
     # Delete the raise below once you have written it.
-    raise NotImplementedError(
-        "Homework: write the gradient descent loop. "
-        "See the YOUR TASK box just above for the steps."
-    )
-
+    for _ in range(n_iter):
+        p = predict_proba(X_design, beta)
+        history.append(log_loss(y, p))
+        grad = gradient(X_design, y, beta)
+        beta = beta - lr * grad
+        
     return beta, history
-
-
+    
 # ---------------------------------------------------------------------------
 # 4. Reporting
 # ---------------------------------------------------------------------------
