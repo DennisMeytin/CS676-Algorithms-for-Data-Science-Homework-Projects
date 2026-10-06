@@ -17,7 +17,8 @@ This repository holds my work for CS676. Each deliverable lives in its own folde
 
 A credibility scorer for web sources, plugged into a Streamlit research chatbot. Given a URL, `score_url()` returns a score between 0 and 1 and a plain-language explanation. I extended the provided baseline with preprint, subdomain, personal-page and sponsored-content rules, a real-metadata lookup through OpenAlex (retraction status, venue type, citations), better explanations, and a re-tuned blend between the rules and a Claude judgment.
 
-**Headline result** (37 labelled URLs, language-model layer on): mean absolute error 0.117 to 0.060, and band accuracy (HIGH/MEDIUM/LOW) 81.1% to 94.6%. The full tables, how the blend weight was chosen, and the limitations are in [`projects/project_1/RESULTS.md`](projects/project_1/RESULTS.md).
+**Headline result** (37 labelled URLs, language-model layer on): mean absolute error 0.117 to 0.060, and band accuracy (HIGH/MEDIUM/LOW) 81.1% to 94.6%. The full tables, how the blend weight was chosen, and the limitations are in [`projects/project_1/RESULTS.md`](projects/project_1/RESULTS.md). The technique report is [`projects/project_1/Project1_Report.pdf`](projects/project_1/Project1_Report.pdf).
+
 | File | What it is |
 |---|---|
 | `credibility.py` | The scorer (the part I changed) |
@@ -25,6 +26,8 @@ A credibility scorer for web sources, plugged into a Streamlit research chatbot.
 | `test_credibility.py` | 77 offline checks |
 | `main.py` | The Streamlit chat app (unchanged from the starter) |
 | `RESULTS.md` | Results, what changed, and what still fails |
+| `Project1_Report.pdf` | The technique report |
+
 ### Running it
 
 This project uses [uv](https://docs.astral.sh/uv/). From `projects/project_1/`:
