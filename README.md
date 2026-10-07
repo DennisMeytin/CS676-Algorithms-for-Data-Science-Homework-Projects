@@ -8,7 +8,7 @@ This repository holds my work for CS676. Each deliverable lives in its own folde
 
 | Folder | Contents |
 |---|---|
-| [`homework/`](homework/) | The homework exercises: [`01_lr.py`](homework/01_lr.py) (linear regression), [`02_logreg.py`](homework/02_logreg.py) (logistic regression); more added as assigned |
+| [`homework/`](homework/) | The homework exercises, one folder each with the script and its report(s): [`01_lr.py`](homework/homework_1/01_lr.py) (linear regression), [`02_logreg.py`](homework/homework_2/02_logreg.py) (logistic regression), [`03_cv.py`](homework/homework_3/03_cv.py) (k-fold cross validation, with reports for k = 5, 7 and 10); more added as assigned |
 | [`projects/project_1/`](projects/project_1/) | **Project 1: Credibility Scoring** (see below) |
 | `projects/project_2/` | Project 2 (not yet added) |
 | `projects/project_3/` | Project 3 (not yet added) |
