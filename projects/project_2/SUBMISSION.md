@@ -13,8 +13,8 @@ measurements are in [`RESULTS.md`](RESULTS.md).
 persona files safe to manage from a model that can change them.
 
 **Out of scope (not attempted).** Agent memory, smarter turn-taking, an observer agent,
-self-updating personas, and the Gradio/Streamlit deployment bonus. `REPORT.md` section 6
-says how each would build on this work.
+self-updating personas, and the Gradio/Streamlit deployment bonus. `REPORT.md` section 5 names the most useful next steps (an observer agent that scores
+whether characters hold their positions, and a limit on reply length).
 
 ## What changed
 

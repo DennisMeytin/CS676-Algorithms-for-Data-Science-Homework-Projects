@@ -10,7 +10,7 @@ This repository holds my work for CS676. Each deliverable lives in its own folde
 |---|---|
 | [`homework/`](homework/) | The homework exercises, one folder each with the script and its report(s): [`01_lr.py`](homework/homework_1/01_lr.py) (linear regression), [`02_logreg.py`](homework/homework_2/02_logreg.py) (logistic regression), [`03_cv.py`](homework/homework_3/03_cv.py) (k-fold cross validation, with reports for k = 5, 7 and 10), [`04_tree.py`](homework/homework_4/04_tree.py) (decision tree from scratch, with reports and decision-region plots for fits 1, 2, 3 and 4, shown [below](#homework-4-decision-tree)); more added as assigned |
 | [`projects/project_1/`](projects/project_1/) | **Project 1: Credibility Scoring** (see below) |
-| `projects/project_2/` | Project 2 (not yet added) |
+| [`projects/project_2/`](projects/project_2/) | **Project 2: PersonaForge** (see below) |
 | `projects/project_3/` | Project 3 (not yet added) |
 
 ## Homework 4: Decision Tree
@@ -63,6 +63,42 @@ The chat app and the language-model layer need an Anthropic API key. Copy `.env.
 ```bash
 uv run python evaluate.py --llm --metadata   # final configuration (billed to your key)
 uv run streamlit run main.py                 # the chat app
+```
+
+No real keys are stored in this repository; `.env` is git-ignored.
+
+## Project 2: PersonaForge
+
+A small Python package where you type a request in a terminal and Claude creates characters as markdown files, edits them, and has them talk to each other. I extended the provided skeleton: I replaced its regular-expression router with real tool use (the model picks the action and fills in the arguments), made the persona files safe to manage from a model that can change them (no silent overwrites, validated edits with backup and undo), made failures readable and recoverable, and added a per-session cost estimate.
+
+**Headline result:** the offline test suite grew from 41 to 152 tests (99.7% line coverage), and the live system ran on three models (Haiku 5.5, Sonnet 5.5, Opus 5.5) for about $0.010, $0.22 and $0.46 per session. An experiment on the most visible failure, characters asked to argue ending up agreeing, found that a "hold your position" prompt rule made no measurable difference (the patient gave in in 4 of 5 conversations either way), so the rule was removed. The full write-up and the open weaknesses are in [`projects/project_2/REPORT.md`](projects/project_2/REPORT.md), also as [`Project2_Report.pdf`](projects/project_2/Project2_Report.pdf).
+
+| Path | What it is |
+|---|---|
+| `src/personaforge/` | The package (the orchestrator, persona, LLM and CLI changes are mine) |
+| `tests/` | 152 offline tests, no API key needed |
+| `evals/` | The agreement-drift experiment and its results |
+| `report_materials/` | Raw live sessions, transcripts and personas behind the report |
+| `REPORT.md` | The technical report |
+| `Project2_Report.pdf` | The report as a PDF |
+| `RESULTS.md` | Detailed measurements and failure notes |
+| `SUBMISSION.md` | One-page summary of what changed |
+| `README.md` | The professor's original README, unchanged apart from a pointer line |
+
+### Running it
+
+This project uses [uv](https://docs.astral.sh/uv/). From `projects/project_2/`:
+
+```bash
+uv sync                                    # install the pinned dependencies
+uv run pytest                              # 152 tests, no key needed
+uv run main.py --offline                   # the whole app with a scripted model, no key
+```
+
+The live app needs an Anthropic API key. Copy `.env.example` to `.env`, add your own key, then:
+
+```bash
+uv run main.py --model claude-haiku-5-5    # live (billed to your key; about a cent per session on Haiku)
 ```
 
 No real keys are stored in this repository; `.env` is git-ignored.
