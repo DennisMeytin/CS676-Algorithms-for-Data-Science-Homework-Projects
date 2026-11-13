@@ -1,0 +1,8 @@
+create a persona
+a direct, busy ER doctor
+create a patient with chronic back pain who distrusts doctors
+make the doctor much more skeptical of new treatments
+have them argue about the diagnosis for 4 turns
+list personas
+undo the edit to the doctor
+list personas

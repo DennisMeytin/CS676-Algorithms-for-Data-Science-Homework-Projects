@@ -1,0 +1,4 @@
+create a persona: a direct, busy ER doctor
+make the doctor much more skeptical of new treatments
+undo that edit
+edit the doctor so her name is Bob

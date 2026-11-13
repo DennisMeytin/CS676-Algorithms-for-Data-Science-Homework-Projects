@@ -1,0 +1,21 @@
+baseline: 5 conversations done
+hold_rule: 5 conversations done
+
+arm        run  doctor  patient  outcome
+baseline   0    5       2        patient_gave_in
+baseline   1    5       2        patient_gave_in
+baseline   2    5       2        patient_gave_in
+baseline   3    5       2        patient_gave_in
+baseline   4    5       4        both_held
+  -> baseline: mean doctor_held 5.0, patient_held 2.4, gave in 4/5
+hold_rule  0    5       2        patient_gave_in
+hold_rule  1    4       2        patient_gave_in
+hold_rule  2    4       2        patient_gave_in
+hold_rule  3    5       4        both_held
+hold_rule  4    4       2        patient_gave_in
+  -> hold_rule: mean doctor_held 4.4, patient_held 2.4, gave in 4/5
+
+conversation cost: ~$0.023 (judge calls not included)
+
+full results: evals/results/hold_position.json
+done

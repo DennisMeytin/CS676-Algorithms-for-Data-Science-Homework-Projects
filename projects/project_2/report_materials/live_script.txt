@@ -1,0 +1,9 @@
+create a persona
+a direct, busy ER doctor
+create a patient with chronic back pain who distrusts doctors
+list personas
+make the doctor much more skeptical of new treatments
+have them argue about the diagnosis for 8 turns
+create a second persona: a gentle, unhurried doctor
+have the doctor talk with the patient about the MRI for 4 turns
+undo the edit to the first doctor

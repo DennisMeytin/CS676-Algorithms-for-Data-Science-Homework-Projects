@@ -1,0 +1,6 @@
+create a persona
+a skeptical, overworked ER doctor who respects data but hates being second-guessed
+create a patient who is sure her chronic back pain is being dismissed and who keeps her own symptom log
+list personas
+make the doctor a little more patient with questions
+have them discuss whether she needs an MRI for 10 turns

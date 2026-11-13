@@ -1,0 +1,5 @@
+create a persona
+a doctor who is direct and busy
+create a patient with chronic back pain
+list personas
+have them argue about the diagnosis for 4 turns

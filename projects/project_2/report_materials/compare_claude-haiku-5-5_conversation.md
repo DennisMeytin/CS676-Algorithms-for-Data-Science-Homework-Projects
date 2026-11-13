@@ -1,0 +1,39 @@
+# Conversation: Argue about Denise's diagnosis for her chronic lower back pain, including whether it needs a new treatment or what already works.
+
+Participants: Dr. Renata Okafor-Lindqvist, Denise Okafor-Brandt
+
+**Dr. Renata Okafor-Lindqvist:** Chronic low back pain is a symptom, not a diagnosis. Before we argue about treatment, tell me what's actually been established: imaging, neuro exam, whether there's any radicular pain or red flags. Until I know that, I can't tell you whether anything new is needed or whether what she's already on is doing its job.
+
+**Denise Okafor-Brandt:** Established? Fine. I have an MRI from 2019 that showed a disc bulge at L4-L5 with mild foraminal narrowing, and a 2021 X-ray that the second surgeon called "degenerative changes, unremarkable for age." Neuro exams have been normal every time I've been tested, reflexes and strength both. No leg pain going down past the knee, no bowel or bladder problems, no fevers, no weight loss. Did you read my pain log, or just the summary they sent over? Because the log says the bad days line up with lifting and long drives, not with anything the imaging says.
+
+**Dr. Renata Okafor-Lindqvist:** Okay, that's useful, and I'll be straight with you: a disc bulge at L4-L5 with mild foraminal narrowing on a 2019 MRI, normal neuro exams, no radicular pain past the knee, no red flags. That picture is common, and in plenty of people the bulge on imaging isn't what's producing the pain. Your log pointing to lifting and long drives is more informative than the scan. Bad days tracking mechanical load suggests a mechanical problem we can work on.
+
+I haven't seen the pain log itself, only what you've told me, so I'd like to read it before I put weight on it. Bring the actual log to the next visit. And the one thing I need to know now: has anyone tried a structured course of physical therapy focused on load management and hip and core strength, for at least six weeks, with you actually doing it? Because if the answer is no, that's what I'd try before anything new, and I'd want to see the same log at the end of it.
+
+**Denise Okafor-Brandt:** Yes, somebody tried it. I did PT for eleven weeks in 2022 with a therapist I liked, and I went to nearly every session. We worked on hip hinge mechanics, core stabilization, and graded lifting. It helped on the good days and did nothing for the bad ones. Then my insurance stopped covering it past twenty visits, and I couldn't keep paying out of pocket, so I stopped.
+
+So don't tell me to try it again like it's new. What I want to know is why you think the second round will be different from the first. And if it's not, what's the next step after PT that doesn't just mean another pill or a knife?
+
+**Dr. Renata Okafor-Lindqvist:** Fair. I won't tell you to repeat eleven weeks that already gave you partial relief and didn't touch the bad days. I'd only expect a different result if something changes in how it's done, not just the calendar.
+
+So here's what I'd want to know before anything else: did the program on the bad days ever get modified? Eleven weeks of hinge and core work that helps good days and not bad ones usually means the load on bad days wasn't being managed, the lifting and long-drive pattern itself. Did anyone have you working on what happens the day before a long drive, or how you split a heavy load, or positioning in the car?
+
+If the answer is no, the next step isn't another pill or a knife. It's a targeted, short episode: a few visits focused on your specific triggers, a plan for flare days, and a seated-position and driving fix, measured against your log. If that also fails, then we're looking at a diagnostic block (a targeted injection at L4-L5, which tells us whether that level is the generator) before any surgical conversation. That's the honest order. Do you know whether anyone ever looked at the driving piece, or was it all done on the table?
+
+**Denise Okafor-Brandt:** Some of it was done in the clinic. Driving got one conversation, maybe five minutes, about moving the seat closer and taking breaks. Nobody asked what I was doing the day before a drive, or how I was carrying the lifts at work. I'd have to tell you I was asked that once by a receptionist, when she wanted my insurance card updated.
+
+Here's my problem with the injection. You said it tells us whether L4-L5 is the generator. Fine. But I've billed enough of those procedures to know a positive block can be read a dozen ways, and the first one is usually "the procedure worked, so do the next one." So before I agree to a needle in my spine, tell me what result would make you say L4-L5 is NOT the problem, and what you'd do then. If you can't answer that, I'm not sure the test is for me.
+
+**Dr. Renata Okafor-Lindqvist:** Good question, and the honest answer is that a diagnostic block is only worth doing if it can come back negative and change the plan. So here's the decision rule, set before the needle goes in.
+
+Two separate injections, not one. The first is a medial branch or facet block, or a selective nerve root block, depending on what the imaging and exam point to. We need to agree on which one before we do it. We diagnose the level with local anesthetic only, no steroid. If you get near-complete relief of your typical bad-day pain for the duration of the anesthetic, that's a positive. If your pain is unchanged, or you're still at baseline after a fair observation window, that's a negative for L4-L5 as the main generator.
+
+If it's negative, I'd stop chasing L4-L5. We'd look elsewhere: the sacroiliac joint, the hip, or we'd accept that the bulge is incidental and go back to the load-management problem, which your log already points to. No further injections at that level, and no surgical discussion on the strength of this test.
+
+If it's positive, I still wouldn't jump to the next procedure automatically. A positive anesthetic block earns a single steroid-based treatment at most, with a defined re-assessment at about six weeks against your log, using the same measures. Only if that yields a durable, meaningful improvement do we talk about repeating it, and never open-ended.
+
+So tell me what you'd accept as a meaningful improvement. Write the number down now, before the procedure, so neither of us can move the goalposts later.
+
+**Denise Okafor-Brandt:** Fine, I'll give you a number, but I want it on the record as yours and mine, not something you can revise after the fact. Right now my bad days run about six out of ten on the log, and I'm sitting out work or canceling errands on at least four of those. A meaningful improvement is bad days dropping to two or fewer out of ten over a four-week stretch, and at least half as many missed days. Anything less and I'd call it noise.
+
+And since you're asking me to commit, I'll ask you the same. If I hit that number at six weeks, will you say so in writing, and will you tell the next doctor it happened? Because I've watched a "good response" get lost in a chart before, and it usually gets lost in the direction that justifies the next procedure.
