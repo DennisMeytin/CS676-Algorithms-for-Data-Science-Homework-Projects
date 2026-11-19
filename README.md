@@ -8,7 +8,7 @@ This repository holds my work for CS676. Each deliverable lives in its own folde
 
 | Folder | Contents |
 |---|---|
-| [`homework/`](homework/) | The homework exercises, one folder each with the script and its report(s): [`01_lr.py`](homework/homework_1/01_lr.py) (linear regression), [`02_logreg.py`](homework/homework_2/02_logreg.py) (logistic regression), [`03_cv.py`](homework/homework_3/03_cv.py) (k-fold cross validation, with reports for k = 5, 7 and 10), [`04_tree.py`](homework/homework_4/04_tree.py) (decision tree from scratch, with reports and decision-region plots for fits 1, 2, 3 and 4, shown [below](#homework-4-decision-tree)); more added as assigned |
+| [`homework/`](homework/) | The homework exercises, one folder each with the script and its report(s): [`01_lr.py`](homework/homework_1/01_lr.py) (linear regression), [`02_logreg.py`](homework/homework_2/02_logreg.py) (logistic regression), [`03_cv.py`](homework/homework_3/03_cv.py) (k-fold cross validation, with reports for k = 5, 7 and 10), [`04_tree.py`](homework/homework_4/04_tree.py) (decision tree from scratch, with reports and decision-region plots for fits 1, 2, 3 and 4, shown [below](#homework-4-decision-tree)), [`05_kmeans.py`](homework/homework_5/05_kmeans.py) (k-means clustering from scratch, plus a seed sweep and a k sweep in [`05_kmeans_sweeps.py`](homework/homework_5/05_kmeans_sweeps.py), shown [below](#homework-5-k-means-clustering)); more added as assigned |
 | [`projects/project_1/`](projects/project_1/) | **Project 1: Credibility Scoring** (see below) |
 | [`projects/project_2/`](projects/project_2/) | **Project 2: PersonaForge** (see below) |
 | `projects/project_3/` | Project 3 (not yet added) |
@@ -31,6 +31,24 @@ A classification tree grown from scratch with greedy Gini splitting, run on four
 | ![Fit 3 decision regions](homework/homework_4/04_tree_regions_fit3.png) | ![Fit 4 decision regions](homework/homework_4/04_tree_regions_fit4.png) |
 
 Regenerate everything from `homework/homework_4/` with `uv run --with numpy --with matplotlib 04_tree.py --all --plot --report`.
+
+## Homework 5: K-Means Clustering
+
+Lloyd's algorithm from scratch in numpy, run on 270 unlabelled points drawn from three blobs the algorithm never sees. With the default seed it recovers all three blobs (purity 1.0000) in 3 passes, and inertia falls on every pass.
+
+| Run | Result | Report | Plot |
+|---|---|---|---|
+| Main run (k = 3) | purity 1.0000, inertia 409.12 to 397.60 | [report](homework/homework_5/05_kmeans_report.md) | [plot](homework/homework_5/05_kmeans_clusters.png) |
+| Seed sweep (seeds 0 to 99) | 78 perfect, 13 near misses, 9 collapsed | [report](homework/homework_5/05_kmeans_sweeps_report.md) | [plot](homework/homework_5/05_kmeans_sweeps.png) |
+| k sweep (k = 1 to 8, best of 10 restarts) | elbow at k = 3 | [report](homework/homework_5/05_kmeans_sweeps_report.md) | [plot](homework/homework_5/05_kmeans_sweeps.png) |
+
+Random initialisation can land in a local optimum: about 1 run in 11 collapsed, with inertia roughly four times higher than a good run, which is detectable without labels. Inertia always falls as k grows, so the elbow is read off the curve instead of minimised.
+
+| Clusters found | Seed sweep and elbow |
+|---|---|
+| ![Clusters found](homework/homework_5/05_kmeans_clusters.png) | ![Seed sweep and elbow plot](homework/homework_5/05_kmeans_sweeps.png) |
+
+Regenerate from `homework/homework_5/` with `uv run --with numpy --with matplotlib 05_kmeans.py --plot --report` and `uv run --with numpy --with matplotlib 05_kmeans_sweeps.py`.
 
 ## Project 1: Credibility Scoring
 
